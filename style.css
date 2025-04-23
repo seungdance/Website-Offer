@@ -1,0 +1,254 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #7f8c8d;
+  --background-color: #fdfdfd;
+  --accent-color: #e74c3c;
+  --card-background: #ffffff;
+  --border-radius: 16px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --highlight-color: #f1c40f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f7f7f7 0%, #ffffff 100%);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-family: "Playfair Display", serif;
+}
+
+.subheadline {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sections */
+.section {
+  padding: 6rem 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* Why Website Section */
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.benefits-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.benefits-list li {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Packages Section */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.package-card {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.package-card ul {
+  list-style: none;
+}
+
+.package-card li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.package-card li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* How It Works Section */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Domain Note in Packages */
+.domain-note {
+  text-align: center;
+  margin-top: 3rem; /* Add space above the note */
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* Contact Section */
+.contact-options {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.email {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  background-color: #eaeaeb; /* A slightly darker background for contrast */
+  margin-top: 4rem; /* Add space above the footer */
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subheadline {
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .package-card.featured {
+    transform: none;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
